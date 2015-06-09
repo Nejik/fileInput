@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if IE 6]>         <html class="no-js ie ie6 lte-ie6 lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js ie ie7 lte-ie7 lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js ie ie8 lte-ie8 lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie ie9 lte-ie9 lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<!--[if lte IE 6]>
+			<meta http-equiv="refresh" content="0;url=http://browsehappy.com">
+		<![endif]-->
+		
+		<!-- if we need ie8, put this on conditional comment for ie8 -->
+		<!-- <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> -->
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<meta name="title" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+			<link rel="stylesheet" href="css/ie.css" />
+		<![endif]-->
+		<!--[if gte IE 9]>
+			<style type="text/css">
+				.gradient {
+					filter: none !important;
+				}
+			</style>
+		<![endif]-->
+		<title></title>
+		<style>
+			h1, h2 {
+				text-align: center;
+			}
+		</style>
+		<style>
+			[data-njf-wrap] {
+			    position: relative;
+			    overflow: hidden;
+			}
+			[data-njf-input] {
+		   		position: absolute;
+		   		top: 0;
+		   		right: 0;
+		   		min-width: 100%;
+		   		min-height: 100%;
+		   		font-size: 100px;
+		   		text-align: right;
+		   		filter: alpha(opacity=0);
+		   		opacity: 0;
+		   		outline: none;
+		   		background: white;
+		   		cursor: inherit;
+		   		display: block;
+			}
+
+			
+			/*user styles*/
+
+			
+		</style>
+	</head>
+	<body>
+		<div id="wrapper" class="clearfix">
+			<header id="header"> 
+				
+			</header>
+			<div id="body">
+				<h1>input:file styles</h1>
+				<h2>styles in source code</h2>
+				
+				<h3>ver 1</h3>
+				<style>
+					.ver1[data-njf-wrap] {
+						border: 1px solid #000;
+						height: 21px;
+						line-height: 21px;
+						padding-right: 50px;
+						position: relative;
+						display: inline-block;
+					}
+
+					.ver1 [data-njf-label] {
+						display: inline-block;
+						min-width:100px;
+					}
+
+					.ver1 .btn-wrap {
+						width: 50px;
+						height: 21px;
+						overflow: hidden;
+						position: absolute;top: 0;right: 0;
+						
+					}
+					.ver1 .btn {
+						width: 100%;
+						height: 100%;
+						position: absolute;top: 0;left: 0;z-index: 1;
+						-webkit-box-shadow: inset 0 0 5px #000;
+						box-shadow: inset 0 0 5px #000;
+					}
+					.ver1 [data-njf-input] {
+						z-index: 2;
+					}
+
+
+					.ver1 [data-njf-input]:hover + .btn {
+						color: red;
+					}
+					.ver1 [data-njf-input]:active + .btn {
+						-webkit-box-shadow: inset 0 0 5px red;
+						box-shadow: inset 0 0 5px red;
+					}
+				</style>
+				<span class="ver1" data-njf-wrap>
+					<span type="text" data-njf-label></span>
+					<span class="btn-wrap">
+						<input type="file" data-njf-input multiple>
+						<span class="btn">Browse</span>
+
+					</span>
+				</span>
+
+				<h3>ver 2</h3>
+				<style>
+					.ver2[data-njf-wrap] {
+						border: 1px solid #000;
+						height: 21px;
+						line-height: 21px;
+						position: relative;
+						display: inline-block;
+					}
+
+					.ver2 [data-njf-label] {
+						display: inline-block;
+					}
+
+					.ver2 [data-njf-input] {
+						z-index: 2;
+					}
+				</style>
+				<span class="ver2" data-njf-wrap>
+					<input type="file" data-njf-input multiple>
+					<span type="text" data-njf-label>Browse</span>
+				</span>
+				
+
+			</div>
+		</div>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src='fileInput_simple.js'></script>
+	</body>
+</html>
